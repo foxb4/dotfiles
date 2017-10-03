@@ -1,0 +1,4 @@
+#!/bin/bash
+DT=$(date '+%Y.%m.%d   %H:%M')
+echo "$DT"
+exit

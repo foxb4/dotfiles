@@ -1,0 +1,5 @@
+#!/bin/bash
+IP=$(ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1 -d'/')
+ESSID=$(iwconfig wlp1s0 2> /dev/null | awk -F\" '{print $2}')
+echo "$ESSID : $IP"
+exit

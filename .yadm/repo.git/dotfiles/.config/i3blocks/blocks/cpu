@@ -1,0 +1,28 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use utf8;
+use Getopt::Long;
+
+my $cpu_usage = -1;
+
+
+# Get CPU usage
+$ENV{LC_ALL}="en_US"; # if mpstat is not run under en_US locale, things may break, so make sure it is
+open (MPSTAT, 'mpstat 1 1 |') or die;
+while (<MPSTAT>) {
+    if (/^.*\s+(\d+\.\d+)\s+$/) {
+        $cpu_usage = 100 - $1; # 100% - %idle
+        last;
+    }
+}
+close(MPSTAT);
+
+$cpu_usage eq -1 and die 'Can\'t find CPU information';
+
+# Print short_text, full_text
+printf "cpu %2.1f%%\n", $cpu_usage;
+printf "cpu %2.1f%%\n", $cpu_usage;
+
+exit(0);

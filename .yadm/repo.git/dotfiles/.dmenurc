@@ -1,0 +1,16 @@
+#font
+DMENU_FN="Noto-10.5"
+
+#backgr unselected
+DMENU_NB="#202020"
+
+#text unselected
+DMENU_NF="#aabfcf"
+
+#backgr selected
+DMENU_SB="#aabfcf"
+
+#text selected
+DMENU_SF="#202020"
+
+DMENU_OPTIONS="-fn $DMENU_FN -nb $DMENU_NB -nf $DMENU_NF -sb $DMENU_SB -sf $DMENU_SF"

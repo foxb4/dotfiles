@@ -1,0 +1,13 @@
+#!/bin/bash
+
+FREE=$(df -hPl "/" | awk -e '
+/\/.*/ {
+        # full text
+        print $4
+
+        exit 0
+}
+')
+
+echo "🖳  "$FREE"iB"
+

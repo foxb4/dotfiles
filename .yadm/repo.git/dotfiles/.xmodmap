@@ -1,0 +1,5 @@
+remove mod1 = Alt_L
+add mod3 = Alt_L
+keycode 76 = Delete F10 Delete F10 Delete
+keycode 75 = End F9 End F9 End
+keycode 74 = Home F8 Home F8 Home

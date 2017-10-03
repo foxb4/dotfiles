@@ -1,0 +1,39 @@
+#!/bin/bash
+
+#text verifying, wrong
+TC='ffffffff'
+
+#colors when idle or typing
+#inside color
+IC='00000050'
+#ring color
+RC='ffdf90ff'
+
+#colors when wrong password is entered
+#inside color
+IWC='aa3344ff'
+#ring color
+RWC='cc3344ff'
+
+#colors for highlighting keypresses and backspaces
+#keypress
+KHC='ffffa0ff'
+#backspace
+BHC='405080cc'
+
+#color when verifying
+IVC='ffffff20'
+RVC='ffffffbb'
+
+#color of date string and time string
+dc='ffdf90ff'
+tc='ffdf90ff'
+
+#text for verifying and wrong
+VT='...checking...'
+WT='self_destruct_initiated'
+TS='14' #status text size
+
+i3lock -e -i /home/brian/Pictures/sky.png --textcolor=$TC -k --insidecolor=$IC --ringcolor=$RC --insidewrongcolor=$IWC --ringwrongcolor=$RWC --keyhlcolor=$KHC --bshlcolor=$BHC --insidevercolor=$IVC --ringvercolor=$RVC --datecolor=$dc --timecolor=$tc --veriftext=$VT --wrongtext=$WT --textsize=$TS --line-uses-inside --indicator
+xset dpms force off
+exit
